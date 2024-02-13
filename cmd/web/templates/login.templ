@@ -1,0 +1,38 @@
+package templates
+
+import "github.com/hculpan/vinylbase/cmd/web/templates/layout"
+
+templ LoginTemplate() {
+<!DOCTYPE html>
+<html>
+
+@layout.Head()
+
+<body>
+
+    @layout.Header()
+
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-4">
+            <div class="col-3">
+                <form action="/login" method="post">
+                    <div class="mb-3">
+                        <label for="username" class="form-label color-main">Username</label>
+                        <input class="form-control" type="text" name="username" placeholder="Username" required />
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label color-main">Password</label>
+                        <input class="form-control mb-3" type="password" name="password" placeholder="Password"
+                            required />
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-color" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+}

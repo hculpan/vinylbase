@@ -8,6 +8,15 @@
 *.so
 *.dylib
 
+.env
+vinylbase
+vinyl-cli
+vinylbase.linux
+vinyl-cli.linux
+dbdata
+.DS_Store
+tmp
+
 # Test binary, built with `go test -c`
 *.test
 

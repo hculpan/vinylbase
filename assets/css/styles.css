@@ -1,0 +1,28 @@
+body {
+    /* This creates a radial gradient starting from the center of the element */
+    background: radial-gradient(circle, #040e14 0%, #17252e 100%);
+    /* Ensures the gradient covers the entire page */
+    background-attachment: fixed;
+    /* Ensures the gradient scales with the window */
+    background-size: cover;
+    /* Ensures the gradient starts from the center */
+    background-position: center;
+  }
+
+.color-main {
+    color: #FFFFFF;
+}
+
+.color-secondary {
+    color: #fb4396;
+}
+
+.btn-color {
+    background-color: #007FFF;
+    color: #040e14;
+}
+
+.sidebar {
+    background-color: #040e14;
+    color: #FFFFFF;
+}

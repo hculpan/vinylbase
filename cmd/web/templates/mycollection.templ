@@ -1,0 +1,54 @@
+package templates
+
+import "github.com/hculpan/vinylbase/cmd/web/templates/layout"
+
+templ HelloTemplate(username string) {
+<!DOCTYPE html>
+<html lang="en">
+@layout.Head()
+
+<body>
+    <div class="d-flex" style="min-height: 100vh;">
+        <!-- Side Navigation Bar -->
+        <nav class="sidebar flex-shrink-0 p-3" style="width: 280px; height: 100vh;">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/mycollection">My Collection</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Wishlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Community</a>
+                </li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="flex-grow-1 p-3">
+            <!-- Header with Logo -->
+            <div
+                class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                @layout.Header()
+            </div>
+
+            <!-- Your content goes here -->
+            <div class="color-main">
+                <p>Welcome to Vinyl Base! Here you can manage your vinyl collection.</p>
+                <!-- More content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+}
